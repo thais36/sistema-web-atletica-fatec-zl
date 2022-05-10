@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema web da Atlética da FATEC Zona Leste">
+    <meta name="keywords" content="Atlética, FATEC, Zona Leste">
+    <meta name="author" content="Alan Serafim, Pablo Pontes, Thais Almeida">
+    <!--Links Partials-->
+    <link rel="icon" href="assets\img\icon\logo_icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="assets\css\base.css">
+    <link rel="stylesheet" href="assets\css\breadcrumb.css">
+    <link rel="stylesheet" href="assets\css\cabecalho.css">
+    <link rel="stylesheet" href="assets\css\acessibilidade\acessibilidade.css">
+    <link rel="stylesheet" href="assets\css\acessibilidade\acessibilidade-atalhos.css">
+    <link rel="stylesheet" href="assets\css\acessibilidade\acessibilidades-links.css">
+    <link rel="stylesheet" href="assets\css\menu-superior\menu.css">
+    <link rel="stylesheet" href="assets\css\menu-superior\menu-superior.css">
+    <link rel="stylesheet" href="assets\css\menu-superior\menu-botao.css">
+    <link rel="stylesheet" href="assets\css\menu-superior\menu-dropdown.css">
+    <link rel="stylesheet" href="assets\css\menu-superior\menu-links.css">
+    <link rel="stylesheet" href="assets\css\menu-superior\logo-atletica.css">
+    <link rel="stylesheet" href="assets\css\rodape.css">
+    <link rel="stylesheet" href="assets\css\rodape-icones\icones__redeSociais.css">
+    <link rel="stylesheet" href="assets\css\rodape-icones\icones.css">
+    <link rel="stylesheet" href="assets\css\rodape-icones\iconesLogo-fatec.css">
+    <link rel="stylesheet" href="assets\css\rodape-icones\iconesRedesSocias-icone.css">
+    <link rel="stylesheet" href="assets\css\rodape-desenvolvimento\desenvolvimento-descricao.css">
+    <link rel="stylesheet" href="assets\css\rodape-desenvolvimento\desenvolvimento.css">
+
+
+
+
+    <link rel="stylesheet" href="assets\css\banner\banner-imagem.css">
+    <link rel="stylesheet" href="assets\css\banner\banner-titulo.css">
+    <link rel="stylesheet" href="assets\css\banner\banner.css">
+    <link rel="stylesheet" href="assets\css\mural\mural.css">
+    <link rel="stylesheet" href="assets\css\mural\mural-titulo.css">
+    <link rel="stylesheet" href="assets\css\mural\noticia-conteudo.css">
+    <link rel="stylesheet" href="assets\css\mural\noticia-descricao.css">
+    <link rel="stylesheet" href="assets\css\mural\noticia-imagem.css">
+    <link rel="stylesheet" href="assets\css\mural\noticia-titulo.css">
+    <link rel="stylesheet" href="assets\css\mural\noticia.css">
+    <link rel="stylesheet" href="assets\css\mural\noticias.css">
+    <link rel="stylesheet" href="assets\css\mapa\mapa.css">
+    <link rel="stylesheet" href="assets\css\mapa\mapa-titulo.css">
+    <link rel="stylesheet" href="assets\css\mapa\mapa-descricao.css">
+    <link rel="stylesheet" href="assets\css\mapa\mapa-iframe.css">
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/JS/contraste.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <section class="acessibilidade">
+            <ul class="acessibilidade__atalhos">
+                <li><a href="#conteudo" accesskey="1" title="Ir diretamente para o conteúdo">Ir para o conteúdo [1]</a></li>
+                <li><a href="#menu" accesskey="2" title="Ir diretamente para o menu">Ir para o menu [2]</a></li>
+                <li><a href="#rodape" accesskey="3" title="Ir diretamente para o rodapé">Ir para o rodapé [3]</a></li>
+            </ul>
+            <ul class="acessibilidade__links">
+                <li><a href="acessibilidade.html" title="Ir para a página de Acessibilidade">ACESSIBILIDADE</a></li>
+                <li class="contraste"><a href="javascript:void(0);" id="contraste">CONTRASTE PRETO</a></li>
+                <li class="contraste"><a href="javascript:void(0);" id="sem_contraste">SEM CONTRASTE</a></li>
+                <li class="fonte"><a href="javascript:void(0);" id="aumentar">A+</a></li>
+                <li class="fonte"><a href="javascript:void(0);" id="diminuir">A-</a></li>
+            </ul>
+        </section>
+        <section class="menu-superior">
+            <a href="index.html"><img class="logo-atletica" src="./assets/img/menu-superior/logo_atletica.png" alt="Imagem do logo da Atlética da Fatec Zona Leste com um escudo nas cores vermelha e amarela e uma coruja branca"></a>
+            <nav class="menu" id="#menu">
+                <label for="menu__botao"><img class="menu__dropdown" data-menuImagem src="./assets/img/menu-superior/menu_white.ico" alt="Imagem do botão de menu contendo três faixas brancas"></label>
+                <input type="checkbox" class="menu__botao" id="menu__botao" data-menuBotao onclick="MudaImg()">
+                <ul class="menu__links">
+                    <li><a href="index.html">INÍCIO</a></li>
+                    <li><a href="quemsomos.html">QUEM SOMOS</a></li>
+                    <li><a href="modalidades.html">MODALIDADES</a></li>
+                    <li><a href="campeonatos.html">CAMPEONATOS</a></li>
+                    <li><a href="eventos.html">EVENTOS</a></li>
+                    <li><a href="loja_virtual.html">LOJA VIRTUAL</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main id="conteudo">
+        <section class="banner">
+            <div class="banner__imagem indexImagem"> </div>
+            <h1 class="banner__titulo">ATLÉTICA FATEC ZONA LESTE</h1>
+        </section>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <section class="mural">
+            <h2 class="mural__titulo">Fique por dentro do que acontece na Atlética Fatec ZL</h2>
+            <div class="noticias">
+                <div class="noticia">
+                    <img class="noticia__imagem" src="./assets/img/mural/modalidades_mural.PNG " alt="Imagem contendo a equipe de futsal feminino da Fatec">
+                    <div class="noticia__conteudo">
+                        <h3 class="noticia__titulo">Modalidades Esportivas</h3>
+                        <p class="noticia__descricao">Conheça e participe das modalidades esportivas da nossa Atlética.</p>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img class="noticia__imagem" src="assets\img\mural\eventos_multirao_atletica.jpg" alt="Imagem contendo a frase mutirão fatec zl juntamente com a data de vinte e um de novembro">
+                    <div class="noticia__conteudo">
+                        <h3 class="noticia__titulo">Multirão de Limpeza</h3>
+                        <p class="noticia__descricao">Participe do Multirão de Limpeza 2022.</p>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img class="noticia__imagem" src="assets\img\mural\college_vermelha.webp" alt="Imagem contendo a frase mutirão fatec zl juntamente com a data de vinte e um de novembro">
+                    <div class="noticia__conteudo">
+                        <h3 class="noticia__titulo">Lojinha da Atlética</h3>
+                        <p class="noticia__descricao">Conheça os novos produtos da lojinha da Atlética.</p>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img class="noticia__imagem" src="./assets/img/mural/modalidades_mural.PNG " alt="Imagem contendo a equipe de futsal feminino da Fatec">
+                    <div class="noticia__conteudo">
+                        <h3 class="noticia__titulo">Modalidades Esportivas</h3>
+                        <p class="noticia__descricao">Conheça e participe das modalidades esportivas da nossa Atlética.</p>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img class="noticia__imagem" src="assets\img\mural\eventos_multirao_atletica.jpg" alt="Imagem contendo a frase mutirão fatec zl juntamente com a data de vinte e um de novembro">
+                    <div class="noticia__conteudo">
+                        <h3 class="noticia__titulo">Multirão de Limpeza</h3>
+                        <p class="noticia__descricao">Participe do Multirão de Limpeza 2022.</p>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img class="noticia__imagem" src="assets\img\mural\college_vermelha.webp" alt="Imagem contendo a frase mutirão fatec zl juntamente com a data de vinte e um de novembro">
+                    <div class="noticia__conteudo">
+                        <h3 class="noticia__titulo">Lojinha da Atlética</h3>
+                        <p class="noticia__descricao">Conheça os novos produtos da lojinha da Atlética.</p>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img class="noticia__imagem" src="./assets/img/mural/modalidades_mural.PNG " alt="Imagem contendo a equipe de futsal feminino da Fatec">
+                    <div class="noticia__conteudo">
+                        <h3 class="noticia__titulo">Modalidades Esportivas</h3>
+                        <p class="noticia__descricao">Conheça e participe das modalidades esportivas da nossa Atlética.</p>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img class="noticia__imagem" src="assets\img\mural\eventos_multirao_atletica.jpg" alt="Imagem contendo a frase mutirão fatec zl juntamente com a data de vinte e um de novembro">
+                    <div class="noticia__conteudo">
+                        <h3 class="noticia__titulo">Multirão de Limpeza</h3>
+                        <p class="noticia__descricao">Participe do Multirão de Limpeza 2022.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mapa">
+            <h3 class="mapa__titulo">LOCALIZAÇÃO</h3>
+            <p class="mapa__descricao">A FATEC ZL está localizada no coração da Zona Leste de São Paulo.</p>
+            <div class="mapa__iframe">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3097954317063!2d-46.47770326835123!3d-23.521357523908254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce61270808f47f%3A0xddc2deca4778eb69!2sFATEC%20Zona%20Leste%20%2F%20Vila%20Uni%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1637589573056!5m2!1spt-BR!2sbr" width="90%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape" id="rodape">
+        <section class="icones">
+            <div class="icones__logo">
+               <a href="http://www.fateczl.edu.br/" target="_blank" rel="noopener"><img class="iconesLogo__fatec" src="assets\img\rodape\logo_fatec_branco.png" alt="Logo da Fatec na cor branca"></a>
+            </div>
+            <div class="icones__redeSociais">
+                <a href="https://www.facebook.com/atleticafateczl/" target="_blank" rel="noopener"><img class="iconesRedesSocias_icone" src="assets\img\rodape\facebook_img_white.ico" alt="imagem do ícone do facebook na cor branca"></a>
+                <a href="https://www.instagram.com/atleticafateczl/" target="_blank" rel="noopener"><img class="iconesRedesSocias_icone" src="assets\img\rodape\instagram_img_white.ico" alt="imagem do ícone do instagram na cor branca"></a>
+                <a href="mailto:fateczlatletica@gmail.com" target="_blank" rel="noopener"><img class="iconesRedesSocias_icone" src="assets\img\rodape\email_img.ico" alt="imagem do ícone de email na cor branca"></a>
+            </div>
+        </section>
+        <div class="desenvolvimento">
+            <p class="desenvolvimento__descricao">Desenvolvido por Alan Serafim, Pablo Pontes e Thais Almeida &copy; 2021.</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./assets/JS/fonte.js"></script>
+    <script type="text/javascript" src="assets\JS\menu_movel.js"></script>
+</body>
+</html>
