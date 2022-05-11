@@ -3,9 +3,9 @@
     <head>
         <!--Metadados-->
         <%- include('../partials/head-meta'); %>
-        <!--Link-partials-->
+        <!--CSS: Fixos-->
         <%- include('../partials/head-links'); %>
-        <!--CSS links-->       
+        <!--CSS: index-->       
         <link rel="stylesheet" href="assets\css\mural\mural.css">
         <link rel="stylesheet" href="assets\css\mural\mural-titulo.css">
         <link rel="stylesheet" href="assets\css\mural\noticia-conteudo.css">
@@ -18,16 +18,14 @@
         <link rel="stylesheet" href="assets\css\mapa\mapa-titulo.css">
         <link rel="stylesheet" href="assets\css\mapa\mapa-descricao.css">
         <link rel="stylesheet" href="assets\css\mapa\mapa-iframe.css">
-        
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="./assets/JS/contraste.js"></script>
+        <!--JS: Scripts (head)-->
+        <%- include('../partials/head-js'); %>
+        <!--Titulo da Página-->
         <title>Home</title>
     </head>
-
     <body>
         <!--Header-->
         <%- include('../partials/header'); %>
-
         <main id="conteudo">
             <section class="banner">
                 <div class="banner__imagem indexImagem"> </div>
@@ -114,8 +112,7 @@
         </main>
         <!--Footer-->
         <%- include('../partials/footer'); %>
-        <!--javaScript links-->
-        <script type="text/javascript" src="./assets/JS/fonte.js"></script>
-        <script type="text/javascript" src="assets\JS\menu_movel.js"></script>
+        <!--JS: Scripts (body)-->
+        <%- include('../partials/body-js'); %>
     </body>
 </html>

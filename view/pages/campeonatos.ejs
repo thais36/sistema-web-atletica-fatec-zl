@@ -3,10 +3,9 @@
     <head>
         <!--Metadados-->
         <%- include('../partials/head-meta'); %>
-        <!--Link-partials-->
+        <!--CSS: Fixos-->
         <%- include('../partials/head-links'); %>
-        <!--CSS links-->
-        <!-- Campeonatos -->
+        <!-- CSS: Campeonatos -->
         <link rel="stylesheet" href="assets\css\campeonatos.css">
         <link rel="stylesheet" href="assets\css\campeonatos-galeria\campeonatos-galeria.css">
         <link rel="stylesheet" href="assets\css\campeonatos-galeria\galeria-descricao.css">
@@ -24,9 +23,9 @@
         <link rel="stylesheet" href="assets\css\campeonatos-vigentes\vigentes-item.css">
         <link rel="stylesheet" href="assets\css\campeonatos-vigentes\vigentes-lista.css">
         <link rel="stylesheet" href="assets\css\campeonatos-vigentes\vigentes-titulo.css">
-        <!--JS-->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="./assets/JS/contraste.js"></script>        
+        <!--JS: Scripts (head)-->
+        <%- include('../partials/head-js'); %>
+        <!--Titulo da Página-->     
     <title>Campeonatos</title>
 </head>
 <body>
@@ -85,8 +84,7 @@
     </main>
     <!--Footer-->
     <%- include('../partials/footer'); %>
-    <!--javaScript links-->
-    <script type="text/javascript" src="./assets/JS/fonte.js"></script>
-    <script type="text/javascript" src="assets\JS\menu_movel.js"></script>
+    <!--JS: Scripts (body)-->
+    <%- include('../partials/body-js'); %>
 </body>
 </html>
