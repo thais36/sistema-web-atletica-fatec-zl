@@ -2,7 +2,6 @@
 .menu__links {
     display: flex;
     list-style: none;
-    
 }
 
 .menu__links li {
@@ -18,6 +17,25 @@
 
 .menu__links a:hover {
     color: var(--menu-hover);
+}
+
+.menu__links li ul{
+    list-style: none;
+    display: none;
+}
+
+.menu__links .menu_colapsado:hover ul {
+    transition: 3s;
+    display: block;
+    position: absolute;
+    background-color: var(--vermelho-atletica);
+    margin-left: -1em;
+    font-size: .8em;
+}
+
+.menu_colapsado ul li {
+    padding-top: 1em;
+    z-index: 5;
 }
 
 
