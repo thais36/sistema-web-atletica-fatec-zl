@@ -9,8 +9,8 @@ async function selectUsuario(){
 
 async function insertUsuario(usuario){
     const conn = await usuarioDB.connect();
-    const sql = 'INSERT INTO usuario(nome, senha) VALUES (?,?);';
-    const values = [usuario.nome, usuario.senha];
+    const sql = 'INSERT INTO membro VALUES (?,?,?,?,?,?,?);';
+    const values = [usuario.id, usuario.cpf, usuario.nome, usuario.email, usuario.senha, usuario.telefone, usuario.data];
     return await conn.query(sql, values);
 }
 
@@ -38,7 +38,7 @@ async function getUsuarioId(id){
 
 async function login(email, senha){
     const conn = await usuarioDB.connect();
-    const sql = 'SELECT * FROM usuario where email=? and senha=?;';
+    const sql = 'SELECT * FROM membro where email=? and senha=?;';
     const values = [email, seguranca.ocultarsenha(senha)];
     const [rows] = await conn.query(sql, values);
     if(rows.length > 0) return rows[0];

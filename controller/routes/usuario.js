@@ -48,6 +48,24 @@ module.exports = function (app){
         res.render('pages/form-2cadastro');
     })
 
+    app.post('/cadastro/usuario/salvar', (req, res) => {
+        try {
+            var usuario = {id: 2,
+                           email: req.body.email,
+                           cpf: req.body.cpf,
+                           nome: req.body.nome,
+                           data: req.body.data,
+                           telefone: req.body.telefone,
+                           senha: seguranca.ocultarsenha(req.body.senha)                        
+                        }
+            usuarioBanco.insertUsuario(usuario);
+            res.render('usuario/Sucesso', {mensagem: 'cadastrado'});
+        } catch (error){
+            res.render('pages/form-2cadastro', { title: 'Cadastro', mensagem: "Erro no cadastro"})
+        }
+    })    
+
+
     app.get('/eventos-inscricao', function (req, res){
         res.render('pages/form-3inscricaoEventos');
     })

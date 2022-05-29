@@ -7,9 +7,17 @@ create table campus (
     nome varchar(255) not null, 
     endereco varchar(255) not null, 
     email varchar(255) not null, 
-    telefones varchar(255) not null, 
-    cursos int not null,
-    foreign key(cursos) references curso(id_curso)
+    telefones varchar(255) not null
+);
+
+
+create table curso (
+	id_curso int auto_increment primary key,
+	nome varchar(255) not null,
+	turma varchar(255) not null,
+	turno varchar(255) not null,
+	inicio date not null,
+	termino date not null
 );
 
 create table atletica (
@@ -17,41 +25,42 @@ create table atletica (
     nome varchar(255) not null, 
     apelido varchar(255) not null, 
     logo varchar(255) not null, 
-    data_fundacao date not null, 
-    #entidade associativa
-    modalidades int not null,
-    foreign key(modalidades) references modalidade_esportiva(id_modalidade)
+    data_fundacao date not null
 );
+
 
 create table modalidade_esportiva (
 	id_modalidade int auto_increment primary key,
     nome varchar(255) not null, 
     genero varchar(255) not null, 
     tipo varchar(255) not null, 
-    equipamento varchar(255) not null 
-    #membros?
+    equipamento varchar(255) 
 );
 
-create table curso (
-	id_curso int auto_increment primary key,
-	nome varchar(255) not null,
-	turma varchar(255) not null,
-	turno varchar(255) not null,
-	inicio varchar(255) not null,
-	termino varchar(255) not null
-);
-
-create table membro (
+create table membro(
 	id_membro int auto_increment primary key,
-	cpf int (255) not null,
+	cpf varchar (20) not null,
     nome varchar (255) not null,
     email varchar (255) not null,
     telefone varchar (255) not null,
     data_nascimento date not null,
     curso int not null,
-    modalidade int not null, 
-    foreign key (id_curso) references curso(id_curso),
+    foreign key (curso) references curso(id_curso)
+);
+
+create table membro_modalidade(
+	membro int not null,
+    modalidade int not null,
+    foreign key (membro) references membro(id_membro),
     foreign key (modalidade) references modalidade_esportiva(id_modalidade)
+);
+
+create table inscricao (
+	id_inscricao int auto_increment primary key, 
+    data_inicio date not null,
+    data_fim date not null, 
+    valor_unitario double not null, 
+    forma_de_pagamento varchar(250) not null
 );
 
 create table eventos (
@@ -63,33 +72,7 @@ create table eventos (
     localidade varchar(255) not null, 
     orcamento double, 
     inscricao int not null, 
-    foreign key(inscricao) references inscricao(id_incricao)
-);
-
-create table cadastro_comunidade(  
-	cpf varchar(255) primary key,
-    nome varchar(255) not null,
-    data_nascimento date not null, 
-    email varchar(255) not null, 
-    telefone varchar(255) not null, 
-    endereco varchar(255) not null, 
-    como_soube_evento varchar(255) not null 
-);
-
-create table cadastro_membro (
-	id_membro int not null, 
-    foreign key (id_membro) references membro(id_membro)
-);
-
-create table inscricao (
-	id_inscricao int auto_increment primary key, 
-    data_inicio date not null,
-    data_fim date not null, 
-    valor_unitario double not null, 
-    forma_de_pagamento varchar(250) not null,
-	cliente int not null, 
-    foreign key(cliente) references cadastro_comunidade(cpf)
-    #foreign key(cliente) references cadastro_membro(id_membro)
+    foreign key(inscricao) references inscricao(id_inscricao)
 );
 
 create table caixa (
@@ -103,6 +86,33 @@ create table caixa (
 );
 
 
-    
-    
-    
+create table cliente_comunidade(  
+	cpf varchar(20) primary key,
+    nome varchar(255) not null,
+    data_nascimento date not null, 
+    email varchar(255) not null, 
+    telefone varchar(255) not null, 
+    endereco varchar(255) not null, 
+    como_soube_evento varchar(255) not null 
+);
+
+create table cliente_membro (
+	id_membro int not null, 
+    foreign key (id_membro) references membro(id_membro)
+);
+
+create table cliente_inscricao(
+	evento_inscricao int not null,
+    id_membro int,
+    id_comunidade varchar(20),
+    foreign key (evento_inscricao) references inscricao(id_inscricao),
+    foreign key (id_membro) references cliente_membro(id_membro),
+    foreign key (id_comunidade) references cliente_comunidade(cpf)
+);
+
+create table curso_campus(
+	campus int,
+    curso int,
+    foreign key(campus) references campus(id_campus),
+    foreign key(curso) references curso(id_curso)
+);
