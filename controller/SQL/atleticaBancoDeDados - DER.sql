@@ -144,17 +144,3 @@ insert into curso (nome, semestres, turno) values ("Logística", "6", "noite");
 insert into curso (nome, semestres, turno) values ("Polímeros", "6", "noite");
 
 
-/*
-Curso	Periodo	Semestres
-Análise e Desenvolvimento de Sistemas	tarde	6
-Análise e Desenvolvimento de Sistemas	noite	6
-Comércio Exterior	manhã	6
-Comércio Exterior	tarde	6
-Desenvolvimento de Produtos Plásticos	noite	6
-Desenvolvimento de Software Multiplataforma	manhã	6
-Gestão de Recursos Humanos 	manhã	6
-Gestão Empresarial	manhã	6
-Logística 	manhã	6
-Logística 	noite	6
-Polímeros 	noite	6
-*/

@@ -1,7 +1,9 @@
 .barra{
-    background-color: grey;
+    background-color: var(--vermelho-atletica);
+    color: var(--titulo-h2);
     display: flex;
     justify-content: space-between;
+    opacity: 0.9;
     align-items: center;
     height: 8vh;
     padding-left: 3vw;
@@ -33,27 +35,37 @@
 }
 
 .menu {
-    background-color: var(--vermelho-atletica);
+    background-color: #1e1e1e;
     width: 18vw;
+    min-height: 92vh;
 }
 
 
 .menu__item li{
-    margin-top: 1em;
+    margin-top: 0;
     display: flex;
     align-items: center;
-    padding-left: 1em;
+    padding: .8em;
     list-style: none;
+    color: whitesmoke;
+    border-bottom: .3px solid whitesmoke;
+}
+
+.menu__item li:hover{
+    right: 10%;
+    padding-left: 2em;
+    transition: 0.3s;
 }
 
 .item_icone{
     width: 2vw;
     padding-right: 1em;
+    filter: invert(100%) saturate(100%) brightness(100%) contrast(60%);
 }
 
 
 .info{
-    background-color: rgba(127, 255, 212, 0.226);
+    background-color: #fefefe;
     width: 82vw;
 }
 
@@ -77,15 +89,39 @@
 .modalidades{
     border: 1px solid black;
     margin: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .eventos{
     border: 1px solid black;
     margin: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .eventos ul {
     display: flex;
+}
+
+.tabela{
+    width: 100%;
+}
+
+.dados th, .dados td{
+    text-align: left;
+}
+
+.dados .tabela {
+    width: unset;
+}
+.dados th {
+    width: 30vw;
+}
+.dados td {
+    width: 67vw
 }
 
 .tabela td, .tabela th{
@@ -94,5 +130,7 @@
 }
 
 .tabela th{
-    background-color: aqua;
+    background-color: var(--vermelho-atletica);
+    color: #fefefe;
+    width: fit-content;
 }

@@ -2,9 +2,9 @@ const seguranca = require('../../model/components/seguranca')
 const usuarioBanco = require('../../model/repositories/usuarioDB')
 
 module.exports = function (app){
-
-    app.get("/", function(req, resp){
-        resp.send("Bem-vindo ao meu app");
+    
+    app.get("/", function(req, res){
+        res.redirect('/index');
     })
 
     app.get('/index', function (req, res){
@@ -73,8 +73,12 @@ module.exports = function (app){
         res.render('pages/form-4inscricaoModalidades');
     });
 
-    app.get('/usuario', function (req, res){
+    app.get('/usuario', seguranca.autenticar, function (req, res){
         res.render('usuario/usuario');
+    });
+
+    app.get('/not-found', function (req, res){
+        res.render('usuario/not-found');
     });
 
 }

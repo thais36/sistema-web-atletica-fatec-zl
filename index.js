@@ -29,7 +29,7 @@ app.use(passport.session());
 
 //Validação de login do usuário -> a URL listada abaixo está como atributo do form da página Login.ejs
 app.post('/login/executar', passport.authenticate('local', {
-    successRedirect: '/lista/usuario',
+    successRedirect: '/usuario',
     failureRedirect: '/login?fail=true'
 }));
 
@@ -39,6 +39,11 @@ consign().include('controller/routes',).into(app);
 
 //Carregamento de arquivos estáticos
 app.use(express.static('view'));
+
+//redirecionamento
+app.use(function(req, res, next){
+    res.status(404).redirect('/not-found')
+});
 
 // esta  deve ser a última linha quando usamos express
 app.listen(8081, function(){
