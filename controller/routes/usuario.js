@@ -76,6 +76,19 @@ module.exports = function (app){
     app.get('/usuario', seguranca.autenticar, function (req, res){
         res.render('usuario/usuario');
     });
+    
+    /*
+     app.get('/usuario', seguranca.autenticar, function (req, res){
+        try{
+            console.log(usuario.id);
+            res.render('usuario/usuario');
+        } catch(err){
+            next(err);    
+        }
+        
+    });
+    */
+
 
     app.get('/not-found', function (req, res){
         res.render('usuario/not-found');

@@ -47,7 +47,7 @@ create table modalidade_esportiva (
 );
 
 create table membro(
-	id_membro int auto_increment primary key,
+	id int auto_increment primary key,
 	cpf varchar (20) not null,
     nome varchar (255) not null,
     email varchar (255) not null,
@@ -61,7 +61,7 @@ create table membro(
 create table membro_modalidade(
 	membro int not null,
     modalidade int not null,
-    foreign key (membro) references membro(id_membro),
+    foreign key (membro) references membro(id),
     foreign key (modalidade) references modalidade_esportiva(id_modalidade)
 );
 
@@ -108,7 +108,7 @@ create table cliente_comunidade(
 
 create table cliente_membro (
 	id_membro int not null, 
-    foreign key (id_membro) references membro(id_membro)
+    foreign key (id_membro) references membro(id)
 );
 
 create table cliente_inscricao(
