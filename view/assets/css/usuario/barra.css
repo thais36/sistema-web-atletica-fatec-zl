@@ -1,0 +1,98 @@
+.barra{
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.barra__descricao{
+    display: flex;
+    align-items: center;
+}
+
+.descricao__logo{
+    width: 3vw;
+}
+
+.descricao__texto{
+    font-size: 1em;
+    margin-left: .5em;
+}
+
+.usuario__nome{
+    margin: unset;
+}
+
+
+
+.container{
+    display: flex;
+}
+
+.menu {
+    background-color: var(--vermelho-atletica);
+    width: 18vw;
+}
+
+
+.menu__item li{
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    list-style: none;
+}
+
+.item_icone{
+    width: 2vw;
+    padding-right: 1em;
+}
+
+
+.info{
+    background-color: rgba(127, 255, 212, 0.226);
+    width: 82vw;
+}
+
+.dados {
+    border: 1px solid black;
+    margin: 1em;
+}
+
+.item{
+    padding: 1em;
+}
+
+
+.item li{
+    width: 30vw;
+    list-style: none;
+    line-height: 2em;
+    text-align: left;
+}
+
+.modalidades{
+    border: 1px solid black;
+    margin: 1em;
+}
+
+.eventos{
+    border: 1px solid black;
+    margin: 1em;
+}
+
+.eventos ul {
+    display: flex;
+}
+
+.tabela td, .tabela th{
+    border: 1px solid black;
+    padding: .8em;
+}
+
+.tabela th{
+    background-color: aqua;
+}

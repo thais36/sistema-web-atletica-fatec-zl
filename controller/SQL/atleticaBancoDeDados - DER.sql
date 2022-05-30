@@ -40,7 +40,9 @@ create table modalidade_esportiva (
 	id_modalidade int auto_increment primary key,
     nome varchar(255) not null, 
     genero varchar(255) not null, 
-    tipo varchar(255) not null, 
+    tipo varchar(255) not null,
+    horario varchar(255),
+    dia_da_semana varchar(255), 
     equipamento varchar(255) 
 );
 

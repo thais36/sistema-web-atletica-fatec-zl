@@ -65,16 +65,16 @@ module.exports = function (app){
         }
     })    
 
-    app.get('/cadastro-salvar', function (req, res){
-        res.render('pages/sucesso-cadastro');
-    })
-
     app.get('/eventos-inscricao', function (req, res){
         res.render('pages/form-3inscricaoEventos');
     })
 
     app.get('/modalidades-inscricao', function (req, res){
         res.render('pages/form-4inscricaoModalidades');
+    });
+
+    app.get('/usuario', function (req, res){
+        res.render('usuario/usuario');
     });
 
 }
