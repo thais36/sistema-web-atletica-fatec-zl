@@ -9,8 +9,8 @@ async function selectUsuario(){
 
 async function insertUsuario(usuario){
     const conn = await usuarioDB.connect();
-    const sql = 'INSERT INTO membro VALUES (?,?,?,?,?,?,?);';
-    const values = [usuario.id, usuario.cpf, usuario.nome, usuario.email, usuario.senha, usuario.telefone, usuario.data];
+    const sql = 'INSERT INTO membro (cpf, nome, email, senha, telefone, data_nascimento) VALUES (?,?,?,?,?,?);';
+    const values = [usuario.cpf, usuario.nome, usuario.email, usuario.senha, usuario.telefone, usuario.data];
     return await conn.query(sql, values);
 }
 
@@ -27,9 +27,10 @@ async function updateUsuario(usuario){
     return await conn.query(sql, values);
 }
 
+
 async function getUsuarioId(id){
     const conn = await usuarioDB.connect();
-    const sql = 'SELECT * FROM usuario where id=?;';
+    const sql = 'SELECT * FROM membro where id=?;';
     const values = [id];
     const [rows] = await conn.query(sql, values);
     if(rows.length > 0) return rows[0];

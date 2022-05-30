@@ -39,7 +39,6 @@ consign().include('controller/routes',).into(app);
 
 //Carregamento de arquivos estáticos
 app.use(express.static('view'));
-//app.use('/static', express.static(__dirname + '/public'));
 
 // esta  deve ser a última linha quando usamos express
 app.listen(8081, function(){
