@@ -34,7 +34,7 @@
             <!--ICONES DE NOTIFICAÇÃO, MENSAGENS, ETC-->
         </div>
         <div class="barra__usuario">
-            <p class="usuario__nome">João da Silva</p>
+            <p class="usuario__nome"> <%= usuarioLogado.nome %></p>
         </div>
     </section>
     <div class="container">
@@ -51,35 +51,35 @@
                 <table class="tabela"> <!-- Tag de tabela-->
                         <tr>
                             <th>Nome: </th>
-                            <td>Alan Nunes Serafim</td>
+                            <td><%= usuarioLogado.nome %></td>
                         </tr>
                         <tr>
                             <th>CPF: </th>
-                            <td>398.292.378-69</td>
+                            <td><%= usuarioLogado.cpf %></td>
                         </tr>
                         <tr>
                             <th>e-mail: </th>
-                            <td>alan.seraf@gmail.com</td>
+                            <td><%= usuarioLogado.email %></td>
                         </tr>
                         <tr>
                             <th>telefone: </th>
-                            <td>(11) 97081-0316</td>
+                            <td><%= usuarioLogado.telefone %></td>
                         </tr>
                         <tr>
                             <th>Data de Nascimento: </th>
-                            <td>14/03/1991</td>
+                            <td><%= usuarioLogado.data_nascimento %></td>
                         </tr>
                         <tr>
                             <th>Curso: </th>
-                            <td>Desenvolvimento de Software Multiplataforma</td>
+                            <td><%= usuarioLogado.curso %></td>
                         </tr>
                         <tr>
                             <th>Turno: </th>
-                            <td>Manhã</td>
+                            <td>INCLUIR</td>
                         </tr>
                         <tr>
                             <th>Turma: </th>
-                            <td>1º Semestre</td>
+                            <td>INCLUIR</td>
                         </tr>
                 </table>
 
