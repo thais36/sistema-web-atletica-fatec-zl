@@ -1,11 +1,11 @@
 const usuarioDB = require("../../controller/db")
 const seguranca = require("../components/seguranca")
 
-async function xxxx(usuario){
+async function insertModalidade(modalidades){
     const conn = await usuarioDB.connect();
-    const sql = 'INSERT INTO TABELA (COLUNA, COLUNA, COLUNA, COLUNA, COLUNA, COLUNA) VALUES (?,?,?,?,?,?);';
-    const values = [usuario.cpf, usuario.nome, usuario.email, usuario.senha, usuario.telefone, usuario.data];
+    const sql = 'INSERT INTO TABELA (nome, genero, tipo, horario, dia_da_semana, equipamento) VALUES (?,?,?,?,?,?);';
+    const values = [usuario.nome, usuario.genero, usuario.tipo, usuario.horario, usuario.dia_da_semana, usuario.equipamento];
     return await conn.query(sql, values);
 }
 
-module.exports = { xxxx }
+module.exports = { insertModalidade }
