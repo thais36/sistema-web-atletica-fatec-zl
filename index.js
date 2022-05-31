@@ -33,6 +33,21 @@ app.post('/login/executar', passport.authenticate('local', {
     failureRedirect: '/login?fail=true'
 }));
 
+
+/*
+
+app.post('/login/executar', passport.authenticate('local', {
+    failureRedirect: '/login?fail=true' }),
+    function (req, res) {
+        const usuarioLogado = await usuarioBanco.getUsuarioId(usuario.id);
+        req.user.id;
+        res.redirect('/usuario:id')
+    }
+    
+});
+*/
+
+
 //npm install consign
 var consign = require('consign');
 consign().include('controller/routes',).into(app);

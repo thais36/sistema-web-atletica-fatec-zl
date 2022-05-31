@@ -74,6 +74,7 @@ module.exports = function (app){
     });
 
     app.get('/usuario', seguranca.autenticar, function (req, res){
+        
         res.render('usuario/usuario');
     });
     
