@@ -7,6 +7,10 @@
         <%- include('../partials/head-links'); %>
         <!--CSS: Login-->
         <link rel="stylesheet" href="assets\css\formularios\login.css">
+
+        <link rel="stylesheet" href="assets\css\usuario\sucesso.css">
+
+
         <!--JS: Scripts (head)-->
         <%- include('../partials/head-js'); %>
         <!--Titulo da Página-->
@@ -20,8 +24,10 @@
             <script>
                 new window.VLibras.Widget('https://vlibras.gov.br/app');
             </script>
-           
-           <h1>Membro <%= mensagem%> com sucesso</h1>
+            <div class="sucesso__container">
+                <p class="sucesso__texto">Membro <br><%= mensagem%> <br>com <br>sucesso</p>
+                <img class="sucesso__img" src="assets\img\usuario\Mic drop-bro.svg" alt="">
+            </div>
         </main>
         <!--Footer-->
         <%- include('../partials/footer'); %>

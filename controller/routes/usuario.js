@@ -20,9 +20,29 @@ module.exports = function (app){
         }
     });
 
+    app.get('/usuario-gestao', seguranca.autenticar, async(req, res, next) => {
+        try {
+                if (req.user.id != null) {
+                    const usuarioID = req.user.id;
+                    console.log(usuarioID);
+                    const usuarioLogado = await usuarioBanco.getUsuarioId(usuarioID);
+                    console.log(usuarioLogado);
+                    res.render('usuario/usuario-adm', {usuarioLogado});
+                } else {
+                    console.log("Deu null");
+                } 
+        } catch (err){
+            next(err);
+        }
+    });
+
 
 
 }
+
+
+
+
 
 
 // ============================= ANOTAÇÕES =============

@@ -17,17 +17,131 @@
         <link rel="stylesheet" href="assets\css\rodape-icones\iconesRedesSocias-icone.css">
         <link rel="stylesheet" href="assets\css\rodape-desenvolvimento\desenvolvimento-descricao.css">
         <link rel="stylesheet" href="assets\css\rodape-desenvolvimento\desenvolvimento.css">
+        <!--CSS: Rodape-->    
+        <link rel="stylesheet" href="assets\css\usuario\barra.css">
         <%- include('../partials/head-js'); %>
         <!--Titulo da Página-->     
     <title>Usuário</title>
 </head>
 <body>
     <main id="conteudo">
+    <section class="barra">
+        <div class="barra__descricao">
+            <a href="/index"><img class="barra__icone" src="assets\img\usuario\arrow-undo-outline.svg" alt=""></a>
+            <img class="descricao__logo" src="./assets/img/menu-superior/logo_atletica.png" alt="Imagem do logo da Atlética da Fatec Zona Leste com um escudo nas cores vermelha e amarela e uma coruja branca">
+            <h1 class="descricao__texto">BEM VINDO A PÁGINA DE GESTORES DA ATLÉTICA</h1>
+        </div>
+        <div class="barra__icones">
+            <!--ICONES DE NOTIFICAÇÃO, MENSAGENS, ETC-->
+        </div>
+        <div class="barra__usuario">
+            <p class="usuario__nome"> <%= usuarioLogado.nome %></p>
+        </div>
+    </section>
+    <div class="container">
+        <section class="menu">
+            <ul class="menu__item">
+                <li><img class="item_icone" src="assets\img\usuario\person.svg" alt="">Gerenciar Membros</li>
+                <li><img class="item_icone" src="assets\img\usuario\basketball.svg" alt="">Gerenciar Esportes</li>
+                <li><img class="item_icone" src="assets\img\usuario\calendar.svg" alt="">Gerenciar Eventos</li>
+            </ul>
+        </section>
+        <section class="relatorios">
+
+            <div class="membros">
+                <p class="descricao">RELATÓRIO DE USUÁRIOS</p>
+                <table class="tabela"> 
+                    <thead> 
+                        <tr>
+                            <th>Perfil</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>email</th>
+                            <th>telefone</th>
+                            <th>Data de Nascimento</th>
+                            <th>Curso</th>
+                            <th>Turno</th>
+                            <th>Turma</th>
+                            <th>Editar dados</th>
+
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr>
+                            <td>Membro</td>
+                            <td>Alan Nunes Serafim</td>
+                            <td>398.292.378-69</td>
+                            <td>alan@gmail.com</td>
+                            <td>(11) 97081-0316</td>
+                            <td>14/03/1991</td>
+                            <td>Desenvolvimento de Software Multiplataforma</td>
+                            <td>Manhã</td>
+                            <td>2º Semestre</td>
+                            <td><input type="button" value="editar"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="modalidades">
+                <p class="descricao">MODALIDADES ESPORTIVAS</p>
+                <table class="tabela"> 
+                    <thead> 
+                        <tr>
+                            <th>Modalidade</th>
+                            <th>Genero</th>
+                            <th>Dia dos treinos</th>
+                            <th>Horário</th>
+                            <th>Editar dados</th>
+
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr>
+                            <td>Futsal</td>
+                            <td>Misto</td>
+                            <td>Segunda-Feira / Terça-feira</td>
+                            <td>2ª das 14:00 as 16:00 / 4ª das 13:00 as 15:00</td>
+                            <td><input type="button" value="editar"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="eventos">
+                <p class="descricao">EVENTOS CADASTRADOS</p>
+                <table class="tabela"> 
+                    <thead> 
+                        <tr>
+                            <th>Evento</th>
+                            <th>Descrição</th>
+                            <th>Data</th>
+                            <th>Horário de início</th>
+                            <th>Horário de termino</th>
+                            <th>Local</th>
+                            <th>Editar dados</th>
+
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr>
+                            <td>INTERFATEC</td>
+                            <td>A maior festa da sua vida.</td>
+                            <td>10/10/2022</td>
+                            <td>13:00 horas</td>
+                            <td>00:00 horas</td>
+                            <td>Rua São joão, Nº 1000, Itaquera - SP, CEP: 08555-100</td>
+                            <td><input type="button" value="editar"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+        </section>
+    </div>    
 
     </main>
-    <!--Footer-->
-    <%- include('../partials/footer'); %>
-    <!--JS: Scripts (body)-->
-    <%- include('../partials/body-js'); %>
+     <%- include('../partials/body-js'); %>
 </body>
 </html>

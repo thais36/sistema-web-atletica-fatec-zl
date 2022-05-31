@@ -51,7 +51,8 @@ create table membro(
 	cpf varchar (20) not null,
     nome varchar (255) not null,
     email varchar (255) not null,
-    senha varchar (255) not null, 
+    senha varchar (255) not null,
+    perfil varchar(255) not null, #aluno ou Gestor 
     telefone varchar (255) not null,
     data_nascimento date not null,
     curso int,

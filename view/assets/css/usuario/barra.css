@@ -6,8 +6,18 @@
     opacity: 0.9;
     align-items: center;
     height: 8vh;
-    padding-left: 3vw;
+    padding-left: 1vw;
     padding-right: 3vw;
+}
+
+.barra__icone{
+    width: 3vw;
+    padding-right: 1em;
+    filter: invert(100%) saturate(100%) brightness(100%) contrast(60%);
+}
+
+.barra__icone:hover{
+   transform: scale(1.2);
 }
 
 .barra__descricao{
@@ -133,4 +143,21 @@
     background-color: var(--vermelho-atletica);
     color: #fefefe;
     width: fit-content;
+}
+
+
+.membros th, .membros td{
+    font-size: .7em;
+    padding: 0;
+    margin: 0;
+    line-height: 2em;
+}
+
+.relatorios{
+    background-color: #fefefe;
+    width: 82vw;
+}
+
+.relatorios .eventos, .relatorios .modalidades {
+    margin: .5em;
 }
