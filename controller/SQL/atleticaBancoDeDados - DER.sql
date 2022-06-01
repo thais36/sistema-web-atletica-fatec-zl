@@ -178,3 +178,15 @@ create table membro_modalidade_teste(
 );
 
 INSERT INTO membro_modalidade_teste(id, aluno, nome, genero, tipo, dia_da_semana, horario, equipamento) VALUES (1,"","","","","","","");
+
+
+create table membro_evento_teste(
+    id int auto_increment primary key,
+    nome varchar(255), 
+    cpf varchar (255), 
+    data_realizacao date, 
+    horario varchar(255) ,  
+    localidade varchar(255) 
+);
+
+INSERT INTO membro_evento_teste(id, nome, cpf, data_realizacao, horario, localidade) VALUES (1,"","","2022-01-01","","");

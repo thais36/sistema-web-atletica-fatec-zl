@@ -22,7 +22,7 @@
             </script>
                 <div class="container">
                     <section class="evento-inscricao">       
-                        <form  class="evento__form" method="POST">
+                        <form  class="evento__form" method="POST" action="eventos-salvar">
                             <h2 class="form__titulo">Eae, bora pro rolê?</h2>
                             <h1 class="form__titulo">Inscreva-se nos EVENTOS</h1>
                             <h2 class="form__titulo">organizados pela Atlética!</h2>
@@ -36,22 +36,26 @@
                                 </select>
                                 <label for="cpf">CPF</label>
                                 <input type="number" name="cpf" required placeholder="999.999.999-99">
-                                <label for="quantidade">Quantidade:</label>
-                                <input type="number" name="quantidade">
                                 <label for="data">Data</label>
-                                <select name="nome">
-                                    <option value="10/10/2022">10/10/2022</option>
-                                    <option value="11/11/2022">11/11/2022</option>
-                                    <option value="12/12/2022">12/12/2022</option>         
+                                <select name="data">
+                                    <option value="2022-10-10">10/10/2022</option>
+                                    <option value="2022-11-11">11/11/2022</option>
+                                    <option value="2022-11-11">12/12/2022</option>         
                                 </select>
-                                <label for="preco">Preço Total:</label>
-                                <input type="text" name="preco">   
+                                <label for="horario">Horário</label>
+                                <select name="horario">
+                                    <option value="12:00 horas">12:00 horas</option>
+                                </select>  
+                                <label for="local">Local</label>
+                                <select name="local">
+                                    <option value="Rua Aguia de Haia n 1000, Itaquera">Rua Aguia de Haia n 1000, Itaquera</option>
+                                </select>
                             </div>
                             <div class="form__botoes"><br>
-                                <input class="form__botoes-comprar" type="submit" value= "Comprar Agora" >
+                                <input class="form__botoes-comprar" type="submit" value= "EFETUAR INSCRICÃO" >
                             </div>
-                        </form>
-                    </section>
+                        </section>
+                    </form>
                     <section class="evento">
                         <div class="evento__data">
                             <p>10-05-22</p>
