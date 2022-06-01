@@ -26,15 +26,22 @@
                     <p class="descricao__texto">Venha fazer parte dos times da Atlética</p>
                 </section>
                 <div class="incricao__caixa">
-                    <form action="" class="inscricao__form">
+                    <form class="inscricao__form" method="POST" action="salvarModalidade" >
                         <div class="inscricao__caixa">
-                            <div class="inscricao__select">    
+                            <div class="inscricao__select">
+                                <label for="aluno">Digite seu nome</label>
+                                <input type="text" name="aluno">    
                                 <label for="modalidade">Escolha sua modalidade esportiva</label>
-                                <select name="modalidade">
+                                <select name="nome">
                                     <option value="Futsal">Futsal</option>
                                     <option value="Basquete">Basquete</option>
                                     <option value="Voleibol">Voleibol</option>  
                                     <option value="Voleibol">Xadrez</option>        
+                                </select>
+                                <label for="tipo">Tipo</label>
+                                <select name="tipo" id="">
+                                    <option value="Individual">Individual</option>
+                                    <option value="Coletivo">Coletivo</option>   
                                 </select>
                                 <label for="genero">Gênero</label>
                                 <select name="genero" id="">
@@ -42,11 +49,17 @@
                                     <option value="Feminino">Feminino</option>  
                                     <option value="Masculino">Misto</option>     
                                 </select>
-                                <label for="horario">Escolha dia e horário do Treino</label>
-                                <select name="horario" id="">
-                                    <option value="Terca">Terça-feira das 10:00 as 12:00 horas</option>
-                                    <option value="Quarta">Quarta-feira das 14:00 as 16:00 horas</option>
-                                    <option value="Quinta">Quinta-feira das 16:00 as 18:00 horas</option>   
+                                <label for="horario">Escolha o dia do treino</label>
+                                <select name="dia_da_semana">
+                                    <option value="Terça-feira">Terça-feira</option>
+                                    <option value="Quarta-feira">Quarta-feira</option>
+                                    <option value="Quinta-feira">Quinta-feira</option>   
+                                </select>
+                                <label for="horario">Escolha o horário do Treino</label>
+                                <select name="horario">
+                                    <option value="10:00 as 12:00 horas">10:00 as 12:00 horas</option>
+                                    <option value="14:00 as 16:00 horas">14:00 as 16:00 horas</option>
+                                    <option value="16:00 as 18:00 horas">16:00 as 18:00 horas</option>   
                                 </select>
                                 <label for="equipamento">Equipamento necessário para os treinos</label>
                                 <input type="text" name="equipamento" id="" value="Sem recomendação">
