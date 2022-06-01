@@ -72,36 +72,23 @@
                         </tr>
                         <tr>
                             <th>Curso: </th>
-                            <td><%= usuarioLogado.curso %></td>
+                            <td><%= cursoDoUsuario.nome %></td>
                         </tr>
                         <tr>
                             <th>Turno: </th>
-                            <td>INCLUIR</td>
+                            <td> <%= cursoDoUsuario.turno %></td>
                         </tr>
                         <tr>
                             <th>Turma: </th>
-                            <td>INCLUIR</td>
+                            <td><%= usuarioLogado.turma %></td>
                         </tr>
                 </table>
-
-                <!--
-                <ul class="item">
-                    <li>Nome: Alan Nunes Serafim</li>
-                    <li>CPF: 398.292.378-69</li>
-                    <li>e-mail: alan.seraf@gmail.com</li>
-                    <li>telefone: (11) 97081-0316</li>
-                    <li>Data de Nascimento: 14/03/1991</li>
-                    <li>Curso: Desenvolvimento de Software Multiplataforma</li>
-                    <li>Turno: Manhã</li>
-                    <li>Turma: 1º Semestre</li>
-                </ul>
-                -->
             </div>
 
             <div class="modalidades">
                 <p class="descricao">MEUS TREINOS</p>
-                <table class="tabela"> <!-- Tag de tabela-->
-                    <thead> <!-- Cabeçalho da tabela -->
+                <table class="tabela"> 
+                    <thead> 
                         <tr>
                             <th>Modalidade</th>
                             <th>Genero</th>
@@ -110,7 +97,7 @@
 
                         </tr>
                     </thead>
-                    <tbody> <!-- Corpo da tabela -->
+                    <tbody> 
                         <tr>
                             <td>Futsal</td>
                             <td>Misto</td>
@@ -123,8 +110,8 @@
 
             <div class="eventos">
                 <p class="descricao">MEUS EVENTOS</p>
-                <table class="tabela"> <!-- Tag de tabela-->
-                    <thead> <!-- Cabeçalho da tabela -->
+                <table class="tabela"> 
+                    <thead> 
                         <tr>
                             <th>Evento</th>
                             <th>Data</th>
@@ -134,7 +121,7 @@
 
                         </tr>
                     </thead>
-                    <tbody> <!-- Corpo da tabela -->
+                    <tbody> 
                         <tr>
                             <td>INTERFATEC</td>
                             <td>10/10/2022</td>
@@ -151,10 +138,6 @@
     </div>    
 
     </main>
-    <!--Footer
-    <%- include('../partials/footer'); %>
-    -->
-    <!--JS: Scripts (body)-->
     <%- include('../partials/body-js'); %>
 </body>
 </html>

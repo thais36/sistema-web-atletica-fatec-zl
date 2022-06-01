@@ -32,10 +32,14 @@
                             <input type="text" name="nome" required placeholder="Nome Completo">
                             <label for="data">Data de Nascimento</label>
                             <input type="date" name="data" required>
-                            <!--<label for="curso">Curso:</label>
-                            <input type="text" name="curso">
+                            <label for="curso">Curso:</label>
+                            <select name="curso">
+                                <% cursos.forEach(function(curso){ %>
+                                    <option value=" <%= curso.id %> "> <%= curso.nome %> - <%= curso.turno %> </option>    
+                                <% }) %>
+                            </select>
                             <label for="turma">Turma:</label>
-                            <input type="text" name="turma">-->
+                            <input type="text" name="turma">
                             <label for="celular">Celular</label>
                             <input type="tel" name="telefone" placeholder="(99) 99999-9999">
                             <label for="senha" >Senha:</label>

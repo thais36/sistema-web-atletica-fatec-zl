@@ -6,5 +6,11 @@ module.exports = function (app){
     app.get('/eventos-inscricao', function (req, res){
         res.render('forms/form-3inscricaoEventos');
     })
+
+    app.get('/sucesso-eventos', function (req, res){
+        res.render('forms/sucesso-evento');
+    })
+
+
    
 }

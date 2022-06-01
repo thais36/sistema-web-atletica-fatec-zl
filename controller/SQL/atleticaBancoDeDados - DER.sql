@@ -41,8 +41,8 @@ create table modalidade_esportiva (
     nome varchar(255) not null, 
     genero varchar(255) not null, 
     tipo varchar(255) not null,
-    horario varchar(255),
-    dia_da_semana varchar(255), 
+    dia_da_semana varchar(255),
+    horario varchar(255), 
     equipamento varchar(255) 
 );
 
@@ -56,6 +56,7 @@ create table membro(
     telefone varchar (255) not null,
     data_nascimento date not null,
     curso int,
+    turma varchar(250),
     foreign key (curso) references curso(id_curso)
 );
 
@@ -143,5 +144,13 @@ insert into curso (nome, semestres, turno) values ("Gestão Empresarial", "6", "
 insert into curso (nome, semestres, turno) values ("Logística", "6", "manhã");
 insert into curso (nome, semestres, turno) values ("Logística", "6", "noite");
 insert into curso (nome, semestres, turno) values ("Polímeros", "6", "noite");
+
+insert into modalidade_esportiva (nome, genero, tipo, dia_da_semana, horario, equipamento) values ("Futsal", "Maculino", "Coletivo", "Terça-feira / Quarta-feira", "14:00 as 16:00", "Calçado");
+insert into modalidade_esportiva (nome, genero, tipo, dia_da_semana, horario, equipamento) values ("Futsal", "Feminino", "Coletivo", "Segunda-feira / Quinta-feira", "14:00 as 16:00", "Calçado");
+insert into modalidade_esportiva (nome, genero, tipo, dia_da_semana, horario, equipamento) values ("Volei", "Misto", "Coletivo", "Segunda-feira / Quinta-feira", "17:00 as 18:00", "Calçado");
+
+insert into eventos (nome, data_realizacao, horario_inicio, horario_fim, localidade, orcamento) values ("INTERFATEC","2020-12-12","13:00", "23:59", "Rua São joão, Nº 1000, Itaquera - SP, CEP: 08555-100", 8.000);
+insert into eventos (nome, data_realizacao, horario_inicio, horario_fim, localidade, orcamento) values ("FATEC RUN","2020-10-10","09:00", "12:00", "Avenida Dom Pedro, Nº 12, Itaquera - SP, CEP: 08555-100", 8.000);
+insert into eventos (nome, data_realizacao, horario_inicio, horario_fim, localidade, orcamento) values ("GEEK DAY","2020-06-01","08:00", "22:00", "Avenida Águia de Haia, 2983. Cidade A.E. Carvalho, CEP 03694-000, São Paulo-SP.", 8.000);
 
 

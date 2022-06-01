@@ -8,10 +8,10 @@ module.exports = function (app){
         try {
                 if (req.user.id != null) {
                     const usuarioID = req.user.id;
-                    console.log(usuarioID);
                     const usuarioLogado = await usuarioBanco.getUsuarioId(usuarioID);
-                    console.log(usuarioLogado);
-                    res.render('usuario/usuario', {usuarioLogado});
+                    const cursoDoUsuarioId = await usuarioBanco.getCursoUsuarioId(usuarioID);
+                    const cursoDoUsuario = await usuarioBanco.getCursoUsuario(cursoDoUsuarioId.curso);
+                    res.render('usuario/usuario', {usuarioLogado, cursoDoUsuario});
                 } else {
                     console.log("Deu null");
                 } 

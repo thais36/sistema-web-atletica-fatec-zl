@@ -23,14 +23,27 @@
                 <div class="container">
                     <section class="evento-inscricao">       
                         <form  class="evento__form" method="POST">
-                            <h1 class="form__titulo">Compra de Ingressos</h1>
+                            <h2 class="form__titulo">Eae, bora pro rolê?</h2>
+                            <h1 class="form__titulo">Inscreva-se nos EVENTOS</h1>
+                            <h2 class="form__titulo">organizados pela Atlética!</h2>
+                            
                             <div class="form__campos">
+                                <label for="nome">Evento</label>
+                                <select name="nome">
+                                    <option value="INTERFATEC">INTERFATEC</option>
+                                    <option value="FATEC RUN">FATEC RUN</option>
+                                    <option value="GEEK DAY">GEEK DAY</option>         
+                                </select>
                                 <label for="cpf">CPF</label>
                                 <input type="number" name="cpf" required placeholder="999.999.999-99">
                                 <label for="quantidade">Quantidade:</label>
                                 <input type="number" name="quantidade">
-                                <label for="data">Escolha a data:</label>
-                                <input type="date" name="data">
+                                <label for="data">Data</label>
+                                <select name="nome">
+                                    <option value="10/10/2022">10/10/2022</option>
+                                    <option value="11/11/2022">11/11/2022</option>
+                                    <option value="12/12/2022">12/12/2022</option>         
+                                </select>
                                 <label for="preco">Preço Total:</label>
                                 <input type="text" name="preco">   
                             </div>

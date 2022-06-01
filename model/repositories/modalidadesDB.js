@@ -8,4 +8,7 @@ async function xxxx(usuario){
     return await conn.query(sql, values);
 }
 
+
+
+
 module.exports = { xxxx }
